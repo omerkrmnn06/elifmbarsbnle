@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Benim İçin Çok Özelsin ❤️</title>
+  <style>/* Stil kısmı aynı */</style>
+</head>
+<body>
+  <h1>❤️ Canımın içi, benimle barışır mısın? ❤️</h1>
+  <p>Sensiz her şey eksik... Gülüşünü, sesini, varlığını çok özledim.</p>
+  <button onclick="cevapGoster(true)">Evet 💖</button>
+  <button onclick="cevapGoster(false)">Hayır 💔</button>
+  <p id="cevap" class="hidden"></p>
+  <div id="video"></div>
+  <script>
+    function cevapGoster(evetsi) {
+      const mesaj = document.getElementById("cevap");
+      const video = document.getElementById("video");
+      mesaj.classList.remove("hidden");
+      if (evetsi) {
+        mesaj.textContent = "Dünyalar benim oldu! Seni çok seviyorum! 💞";
+        video.innerHTML = `<iframe src="https://www.youtube.com/embed/8GQYjGZ3ScY?autoplay=1" allow="autoplay"></iframe>`;
+      } else {
+        mesaj.textContent = "Yine de seni seviyorum... 🍂";
+        video.innerHTML = `<iframe src="https://www.youtube.com/embed/xQ-yL-Yw-Fo?autoplay=1" allow="autoplay"></iframe>`;
+      }
+    }
+  </script>
+</body>
+</html>
